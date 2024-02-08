@@ -1,0 +1,28 @@
+{
+  "name": "voto-auditado",
+  "version": "1.0.0",
+  "description": "Projeto base em node, next e react",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run compose:up && next dev",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write .",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "compose:up": "docker compose -f infra/compose.yaml up -d --force-recreate",
+    "compose:stop": "docker compose -f infra/compose.yaml stop",
+    "compose:down": "docker compose -f infra/compose.yaml down"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^13.4.19",
+    "pg": "^8.11.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "prettier": "^3.1.1"
+  }
+}
